@@ -7,7 +7,7 @@ from keyboards.default.men_rozi import men_rizo
 from loader import dp,bot
 from states.kurier import *
 
-kurier = [1173831936,]
+kurier = [1173831936,5073342340,2122716745]
 
 # Echo bot
 
