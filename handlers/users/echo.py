@@ -7,10 +7,15 @@ from keyboards.default.men_rozi import men_rizo
 from loader import dp,bot
 from states.kurier import *
 
-kurier = [1173831936,1424712044]
+kurier = [1173831936,1424712044,5073342340]
 
 # Echo bot
 
+
+
+@dp.message_handler(text="idlar",user_id=1173831936)
+async def Idxona(ms:types.Message):
+    await ms.answer(f"{kurier}")
 
 
 
