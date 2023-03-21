@@ -21,6 +21,7 @@ async def Idxona(ms:types.Message,state:FSMContext):
 
 
 @dp.message_handler(text="yozish",state=Kuriers.ids,user_id=kurier)
+@dp.message_handler(text="yozish",user_id=kurier)
 async def kurxona(ms:types.Message):
     await ms.answer("Kimga yozasiz ❓ ID ni kiriting")
     await Kuriers.ids.set()
