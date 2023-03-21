@@ -14,12 +14,13 @@ kurier = [1173831936,1424712044,5073342340]
 
 
 @dp.message_handler(text="idlar",user_id=1173831936)
-async def Idxona(ms:types.Message):
+async def Idxona(ms:types.Message,state:FSMContext):
     await ms.answer(f"{kurier}")
+    await state.finish()
 
 
 
-@dp.message_handler(text="yozish",user_id=kurier)
+@dp.message_handler(text="yozish",state=Kuriers.ids,user_id=kurier)
 async def kurxona(ms:types.Message):
     await ms.answer("Kimga yozasiz ❓ ID ni kiriting")
     await Kuriers.ids.set()
